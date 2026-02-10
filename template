@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+#define int long long
+#define vb std::vector<bool>
+#define vvb std::vector<vb>
+#define vi std::vector<int>
+#define vvi std::vector<vi>
+#define mii std::map<int, int>
+#define pii std::pair<int, int>
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define len(x) (int) (x).size()
+#define endl std::endl
+#define INF 1e15
+#ifdef LOCAL
+#define debug(x) std::cout << "( " << #x << " : " << x << " )" << endl
+#define here std::cout << "HERE" << endl
+#define dumpvector(x)                                                     \
+	std::cout << "( " << #x << " : ";                                     \
+	for (int dumpvector_i = 0; dumpvector_i < x.size(); dumpvector_i++) { \
+		std::cout << x[dumpvector_i] << " ";                              \
+	}                                                                     \
+	std::cout << ")" << endl;
+#else
+#define debug(x)
+#define here
+#define dumpvector(x)
+#endif
+
+int32_t main() {
+	std::ios::sync_with_stdio(false);
+	std::cin.tie(nullptr);
+
+	return 0;
+}
