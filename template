@@ -4,8 +4,12 @@
 #define vvb std::vector<vb>
 #define vi std::vector<int>
 #define vvi std::vector<vi>
+#define vf std::vector<float>
+#define vvf std::vector<float>
 #define mii std::map<int, int>
+#define mif std::map<int, float>
 #define pii std::pair<int, int>
+#define pff std::pair<float, float>
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define len(x) (int) (x).size()
