@@ -5,7 +5,7 @@
 #define vi std::vector<int>
 #define vvi std::vector<vi>
 #define vf std::vector<float>
-#define vvf std::vector<float>
+#define vvf std::vector<vf>
 #define mii std::map<int, int>
 #define mif std::map<int, float>
 #define pii std::pair<int, int>
