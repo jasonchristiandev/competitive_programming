@@ -8,6 +8,9 @@
 		"a.out": true,
 		"compile.sh": true,
 		"run.sh": true,
-		"new.sh": true
+		"new.sh": true,
+		"compile.bat": true,
+		"run.bat": true,
+		"new.bat": true
 	}
 }
