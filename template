@@ -4,12 +4,20 @@
 #define vvb std::vector<vb>
 #define vi std::vector<int>
 #define vvi std::vector<vi>
+#define vvvi std::vector<vvi>
 #define vf std::vector<float>
 #define vvf std::vector<vf>
+#define vvvf std::vector<vvf>
 #define mii std::map<int, int>
 #define mif std::map<int, float>
 #define pii std::pair<int, int>
 #define pff std::pair<float, float>
+#define vpii std::vector<pii>
+#define vvpii std::vector<vpii>
+#define vvvpii std::vector<vvpii>
+#define vpff std::vector<pff>
+#define vvpff std::vector<vpff>
+#define vvvpff std::vector<vvpff>
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define len(x) (int) (x).size()
