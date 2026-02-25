@@ -16,19 +16,43 @@
 #define endl std::endl
 #define INF 1e15
 #ifdef LOCAL
-#define debug(x) std::cout << "( " << #x << " : " << x << " )" << endl
+#define debug(x) std::cout << "( " << #x << " : " << universal_to_string(x) << " )" << endl
 #define here std::cout << "HERE" << endl
-#define dumpvector(x)                                                     \
-	std::cout << "( " << #x << " : ";                                     \
-	for (int dumpvector_i = 0; dumpvector_i < x.size(); dumpvector_i++) { \
-		std::cout << x[dumpvector_i] << " ";                              \
-	}                                                                     \
-	std::cout << ")" << endl;
 #else
 #define debug(x)
 #define here
-#define dumpvector(x)
 #endif
+template <typename T>
+std::string universal_to_string(const T &value);
+std::string universal_to_string(const std::string &s) {
+	return "\"" + s + "\"";
+}
+template <typename T>
+	requires std::is_arithmetic_v<T>
+std::string universal_to_string(const T &value) {
+	return std::to_string(value);
+}
+template <typename T1, typename T2>
+std::string universal_to_string(const std::pair<T1, T2> &p) {
+	return "(" + universal_to_string(p.first) + ", " + universal_to_string(p.second) + ")";
+}
+template <typename T>
+concept IsIterable = requires(T t) {
+	{ t.begin() } -> std::input_or_output_iterator;
+	{ t.end() } -> std::input_or_output_iterator;
+} && !std::is_same_v<T, std::string>;
+template <IsIterable T>
+std::string universal_to_string(const T &container) {
+	std::string result = "[";
+	bool first = true;
+	for (const auto &item : container) {
+		if (!first) result += ", ";
+		result += universal_to_string(item);
+		first = false;
+	}
+	result += "]";
+	return result;
+}
 
 int32_t main() {
 	std::ios::sync_with_stdio(false);
