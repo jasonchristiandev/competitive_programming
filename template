@@ -25,15 +25,24 @@
 #define INF 1e15
 #ifdef LOCAL
 #define debug(x) std::cout << "( " << #x << " : " << universal_to_string(x) << " )" << endl
+#define info(x) std::cout << "( " << universal_to_string(x) << " )" << endl
 #define here std::cout << "HERE" << endl
 #else
 #define debug(x)
+#define info(x)
 #define here
 #endif
 template <typename T>
 std::string universal_to_string(const T &value);
 std::string universal_to_string(const std::string &s) {
 	return "\"" + s + "\"";
+}
+std::string universal_to_string(const char *s) {
+	return "\"" + std::string(s) + "\"";
+}
+template <std::size_t N>
+std::string universal_to_string(const char (&arr)[N]) {
+	return "\"" + std::string(arr) + "\"";
 }
 template <typename T>
 	requires std::is_arithmetic_v<T>
