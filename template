@@ -21,7 +21,7 @@ using vpff = std::vector<pff>;
 using vvpff = std::vector<vpff>;
 using vvvpff = std::vector<vvpff>;
 const char endl = '\n';
-const long long INF = 1e18;
+const int INF = 1e18;
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define len(x) (int) (x).size()
