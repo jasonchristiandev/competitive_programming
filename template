@@ -1,37 +1,33 @@
 #include <bits/stdc++.h>
 #define int long long
-#define vb std::vector<bool>
-#define vvb std::vector<vb>
-#define vi std::vector<int>
-#define vvi std::vector<vi>
-#define vvvi std::vector<vvi>
-#define vf std::vector<float>
-#define vvf std::vector<vf>
-#define vvvf std::vector<vvf>
-#define mii std::map<int, int>
-#define mif std::map<int, float>
-#define pii std::pair<int, int>
-#define pff std::pair<float, float>
-#define vpii std::vector<pii>
-#define vvpii std::vector<vpii>
-#define vvvpii std::vector<vvpii>
-#define vpff std::vector<pff>
-#define vvpff std::vector<vpff>
-#define vvvpff std::vector<vvpff>
+#define float double
+using vb = std::vector<bool>;
+using vvb = std::vector<vb>;
+using vi = std::vector<int>;
+using vvi = std::vector<vi>;
+using vvvi = std::vector<vvi>;
+using vf = std::vector<float>;
+using vvf = std::vector<vf>;
+using vvvf = std::vector<vvf>;
+using mii = std::map<int, int>;
+using mif = std::map<int, float>;
+using pii = std::pair<int, int>;
+using pff = std::pair<float, float>;
+using vpii = std::vector<pii>;
+using vvpii = std::vector<vpii>;
+using vvvpii = std::vector<vvpii>;
+using vpff = std::vector<pff>;
+using vvpff = std::vector<vpff>;
+using vvvpff = std::vector<vvpff>;
+const char endl = '\n';
+const long long INF = 1e18;
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define len(x) (int) (x).size()
-#define endl std::endl
-#define INF 1e15
 #ifdef LOCAL
 #define debug(x) std::cout << "( " << #x << " : " << universal_to_string(x) << " )" << endl
 #define info(x) std::cout << "( " << universal_to_string(x) << " )" << endl
 #define here std::cout << "HERE" << endl
-#else
-#define debug(x)
-#define info(x)
-#define here
-#endif
 template <typename T>
 std::string universal_to_string(const T &value);
 std::string universal_to_string(const std::string &s) {
@@ -70,6 +66,11 @@ std::string universal_to_string(const T &container) {
 	result += "]";
 	return result;
 }
+#else
+#define debug(x)
+#define info(x)
+#define here
+#endif
 
 int32_t main() {
 	std::ios::sync_with_stdio(false);
