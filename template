@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #define int long long
 #define float double
-#define lfloat long float
+#define lfloat long double
 using vb = std::vector<bool>;
 using vvb = std::vector<vb>;
 using vi = std::vector<int>;
