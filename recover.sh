@@ -10,23 +10,22 @@ if [[ ! -f "$TEMPLATE" ]]; then
 fi
 
 if [[ ! -f "$TARGET" ]]; then
-	cp "$TEMPLATE" "$TARGET"
+	cp "$BACKUP" "$TARGET"
 	echo "Created $TARGET from template."
 	exit 0
 fi
 
 if cmp -s "$TEMPLATE" "$TARGET"; then
-	echo "No changes detected. '$TARGET' is already up to date."
+	cp "$BACKUP" "$TARGET"
+	echo "File recovered successfully."
 else
 	echo "Warning: '$TARGET' differs from the template."
-	
-	read -p "Do you want to overwrite '$TARGET' with the template? (y/N): " choice
+	echo "Backup created at '$(cat .main.cpp.date)'."
+	read -p "Do you want to overwrite '$TARGET' with the backup? (y/N): " choice
 	
 	case "$choice" in 
 		[yY][eE][sS]|[yY]) 
-			cp "$TARGET" "$BACKUP"
-			echo "$(date)" > .main.cpp.date
-			cp "$TEMPLATE" "$TARGET"
+			cp "$BACKUP" "$TARGET"
 			echo "File overwritten successfully."
 			;;
 		*)
