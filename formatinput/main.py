@@ -1,7 +1,0 @@
-inf = open("in", "r")
-outf = open("out", "w")
-result = " ".join(inf.read().split())
-outf.write(result)
-print(result)
-inf.close()
-outf.close()

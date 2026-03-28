@@ -11,6 +11,10 @@
 		"new.sh": true,
 		"compile.bat": true,
 		"run.bat": true,
-		"new.bat": true
+		"new.bat": true,
+		".cph": true,
+		".clangd": true,
+		".clang-format": true,
+		".gitignore": true,
 	}
 }
