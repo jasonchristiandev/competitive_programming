@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #define int long long
 #define float double
-#define lfloat long double
+// #define float long double
 using vb = std::vector<bool>;
 using vvb = std::vector<vb>;
 using vi = std::vector<int>;
@@ -25,6 +25,9 @@ const int INF = 1e18;
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define len(x) (int) (x).size()
+auto sum_range(auto first, auto last) {
+	return std::accumulate(first, last, 0LL);
+}
 #ifdef LOCAL
 #define debug(x) std::cout << "( " << #x << " : " << universal_to_string(x) << " )" << endl
 #define info(x) std::cout << "( " << universal_to_string(x) << " )" << endl
@@ -74,7 +77,7 @@ std::string universal_to_string(const T &container) {
 #endif
 
 void solve() {
-
+	
 }
 
 int32_t main() {
