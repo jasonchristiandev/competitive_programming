@@ -18,5 +18,7 @@
 		".clangd": true,
 		".clang-format": true,
 		".gitignore": true,
+		".main.cpp": true,
+		".main.cpp.date": true,
 	}
 }
